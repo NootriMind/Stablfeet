@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Updated color palette inspired by the Stablfeet product branding */
+:root {
+  --primary-color: #e0c126;      /* bright golden yellow */
+  --secondary-color: #a88a28;    /* darker golden shade */
+  --text-color: #333333;
+  --light-bg: #fafafa;
+}
+
+/* Reset and typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 18px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Hero section */
+#hero {
+  height: 100vh;
+  background-image: url('images/hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Dark overlay to improve readability */
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+#hero .hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+/* Generic section styling */
+section {
+  padding: 80px 20px;
+  /* Offset anchor scroll positions so headings aren’t hidden behind the fixed navbar */
+  scroll-margin-top: 80px;
+}
+
+/* Two‑column information sections */
+.info-section {
+  background: var(--light-bg);
+}
+
+.info-section:nth-of-type(even) {
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-image {
+  flex: 1 1 45%;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.info-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-text {
+  flex: 1 1 50%;
+  margin: 20px;
+}
+
+.info-text h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.info-text p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.info-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-text ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.info-text ul li::before {
+  /* Use a native check mark symbol to avoid icon font loading issues */
+  content: '✔';
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* About section styling */
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Contact section styling */
+.contact {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.contact button {
+  padding: 12px 32px;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background: #222222;
+  color: #ffffff;
+  padding: 30px 20px;
+}
+
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+footer .social-links a {
+  color: #ffffff;
+  margin: 0 8px;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+footer .social-links a:hover {
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-image, .info-text {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Footer styles */
+footer {
+  background: #0e639c;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .social-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+footer .social-links a:hover {
+  opacity: 0.7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.3rem;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-wrap: wrap;
+  }
+}
