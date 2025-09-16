@@ -1,216 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stablfeet | Orthotic Insoles for Comfort & Support</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons used in lists -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-uo5qaMfUi5yb0iFVekz/pRq/H8QQ7lIppupgAK2dK4/6H4zhDWJ/2cqSUXgcoUdqupUGCQJ/ct8O3YpXkfvY4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stablfeet</title>
+  <meta name="description" content="Foot stability training — classes, drills, and programs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1216; --card:#151a21; --muted:#9aa3ad; --text:#e9eef5; --brand:#6ee7b7; --brand-2:#22d3ee;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    header{position:sticky;top:0;background:rgba(15,18,22,.8);backdrop-filter:saturate(180%) blur(8px);z-index:10;border-bottom:1px solid #1f2732}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:800}
+    .logo-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+    .cta{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b0f14;font-weight:700;border:none;cursor:pointer;transition:transform .1s ease}
+    .cta:active{transform:translateY(1px)}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:40px 20px}
+    .hero-card{background:linear-gradient(180deg,rgba(34,211,238,.06),rgba(110,231,183,.06));border:1px solid #263140;border-radius:18px;padding:22px}
+    .hero h1{font-size:44px;line-height:1.1;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 20px}
+    .hero-img{border-radius:18px;overflow:hidden;border:1px solid #263140}
+    .hero-img img{display:block;width:100%;height:auto}
+
+    .section{padding:14px 20px}
+    .section h2{font-size:26px;margin:0 0 14px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+    .card{position:relative;background:var(--card);border:1px solid #263140;border-radius:16px;overflow:hidden}
+    .card img{display:block;width:100%;height:200px;object-fit:cover;filter:saturate(105%)}
+    .card .caption{padding:10px 12px;color:var(--muted);font-size:14px}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:20px}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:min(1200px,92vw);max-height:82vh;border-radius:14px;border:1px solid #2b3646}
+    .lightbox .close{position:fixed;top:16px;right:16px;font-size:28px;background:#0b0f14;border:1px solid #2b3646;border-radius:10px;padding:6px 12px;cursor:pointer}
+
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .price-card{background:var(--card);border:1px solid #263140;border-radius:18px;padding:18px}
+    .price-card h3{margin:0 0 6px}
+    .price{font-size:32px;font-weight:800;margin:8px 0 14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .muted{color:var(--muted)}
+
+    footer{padding:40px 20px;color:#7f8a97}
+    .small{font-size:13px;color:#7f8a97}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}}
+  </style>
 </head>
 <body>
+  <header>
+    <nav class="nav container">
+      <div class="logo"><span class="logo-dot"></span> Stablfeet</div>
+      <a class="cta" id="checkout-header" href="#checkout">Get Program</a>
+    </nav>
+  </header>
 
-<!-- Navigation -->
-<header>
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#features">Relief</a></li>
-      <li><a href="#comfort">Comfort</a></li>
-      <li><a href="#sizing">Size</a></li>
-      <li><a href="#expert">Expert</a></li>
-      <li><a href="#conditions">Conditions</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Build stronger, more stable feet</h1>
+        <p>Simple daily protocols to reduce pain, improve balance, and boost performance. Join the 4‑week Stablfeet starter plan.</p>
+        <a class="cta" href="#checkout">Start now</a>
+      </div>
+      <div class="hero-img">
+        <!-- Replace hero.jpg with your file under images/ -->
+        <img src="images/hero.jpg" alt="Stablfeet balance drill" loading="eager" />
+      </div>
+    </section>
 
-<!-- Hero Section -->
-<section id="hero">
-  <div class="hero-content">
-    <h1>Effective High Arch Orthotic Insoles</h1>
-    <p>Comfort with Each Step — discover the perfect balance of support and cushioning.</p>
-    <a href="https://www.ebay.com/itm/365764382637" class="btn">Shop Now</a>
+    <!-- GALLERY -->
+    <section class="section">
+      <h2>Drills & Sessions</h2>
+      <div class="gallery" id="gallery">
+        <!-- Duplicate a .card block per image; update src + captions -->
+        <figure class="card">
+          <img src="images/session-1.jpg" alt="Single‑leg stance" loading="lazy" data-full="images/session-1.jpg" />
+          <figcaption class="caption">Single‑leg stance progressions</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="images/session-2.jpg" alt="Toe mobility" loading="lazy" data-full="images/session-2.jpg" />
+          <figcaption class="caption">Toe mobility & short‑foot</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="images/session-3.jpg" alt="Balance board" loading="lazy" data-full="images/session-3.jpg" />
+          <figcaption class="caption">Balance board drill</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="images/session-4.jpg" alt="Calf raise eccentrics" loading="lazy" data-full="images/session-4.jpg" />
+          <figcaption class="caption">Eccentric calf raises</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PRICING / CHECKOUT -->
+    <section class="section" id="checkout">
+      <h2>Programs</h2>
+      <div class="pricing">
+        <div class="price-card">
+          <h3>4‑Week Starter</h3>
+          <p class="muted">Daily 10–15 min drills • PDF guide • Video demos</p>
+          <div class="price">$19</div>
+          <!-- STRIPE PAYMENT LINK: replace the href below with your actual payment link URL -->
+          <a class="cta" href="https://buy.stripe.com/test_XXXXXXXX" target="_blank" rel="noopener">Checkout</a>
+          <p class="small">One‑time purchase. Instant download & email receipt.</p>
+        </div>
+        <div class="price-card">
+          <h3>1:1 Session</h3>
+          <p class="muted">30‑min video consult • Form check • Custom plan</p>
+          <div class="price">$49</div>
+          <!-- You can use a second Stripe Payment Link here -->
+          <a class="cta" href="https://buy.stripe.com/test_YYYYYYYY" target="_blank" rel="noopener">Book Now</a>
+          <p class="small">You’ll receive a scheduling link after payment.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="small">© <span id="year"></span> Stablfeet • Train smart, move better.</div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+    <button class="close" id="closeLb" aria-label="Close">✕</button>
+    <img id="lightboxImg" alt="Preview" />
   </div>
-</section>
 
-<!-- Pain Relief Section -->
-<section id="features" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/feature_arch.png" alt="Insole design features highlighting arch support, soft velvet fabric and heel protection">
-    </div>
-    <div class="info-text">
-      <h2>Designed for Foot Pain Relief</h2>
-      <p>Our orthotic insoles are engineered to provide targeted relief where you need it most. Each pair combines ergonomic design with premium materials to alleviate discomfort and support your natural stride.</p>
-      <ul>
-        <li>Soft velvet fabric for ultimate comfort</li>
-        <li>Arch support design adds relief and comfort to your arch</li>
-        <li>U‑shaped heel protection for enhanced stability</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<!-- Comfort Section -->
-<section id="comfort" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/feature_comfort.png" alt="Detailed view of the insole showing honeycomb mesh, breathable memory foam and heel cushion">
-    </div>
-    <div class="info-text">
-      <h2>Ultimate Comfort & Support</h2>
-      <p>Stablfeet insoles are crafted from breathable memory foam and velvet mesh to keep your feet dry and cool while adapting to your unique shape.</p>
-      <ul>
-        <li>Honeycomb mesh promotes ventilation</li>
-        <li>Breathable memory foam adapts to your foot for a custom fit</li>
-        <li>Polyurethane foam layer for durable cushioning</li>
-        <li>Integrated heel cushion absorbs shock and reduces pressure</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Sizing Section -->
-<section id="sizing" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/size_chart.png" alt="Insole size chart and trim-to-fit instructions">
-    </div>
-    <div class="info-text">
-      <h2>Choose Your Perfect Size</h2>
-      <p>Stablfeet insoles are available in two versatile size ranges and can be trimmed for a custom fit. Follow our simple steps to find your size and enjoy a personalised feel.</p>
-      <ul>
-        <li>Available in men’s 8–11½ / women’s 9–12½ and men’s 5–9½ / women’s 6–10½</li>
-        <li>Use the size chart to measure in centimetres or inches</li>
-        <li>Follow the four easy steps: remove your old insole, compare, trim, insert & enjoy</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Expert Endorsement Section -->
-<section id="expert" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/testimonial_expert.png" alt="Medical professional alongside the Stablfeet product packaging">
-    </div>
-    <div class="info-text">
-      <h2>Trusted by Professionals</h2>
-      <p>Comfort isn’t just a promise—it’s a prescription. Stablfeet insoles are recommended by health professionals to provide ultimate foot pain relief and stability with each step.</p>
-      <ul>
-        <li>Clinically inspired design supports proper alignment</li>
-        <li>Suitable for anyone seeking relief from daily foot stress</li>
-        <li>Use them at work, during exercise, or in everyday footwear</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Conditions Section -->
-<section id="conditions" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/foot_problems.png" alt="Illustrations of common foot problems such as plantar fasciitis and heel pain">
-    </div>
-    <div class="info-text">
-      <h2>Ideal Solution for Foot Problems</h2>
-      <p>From athletes to professionals on their feet all day, Stablfeet provides targeted relief for a range of common conditions.</p>
-      <ul>
-        <li>Helps alleviate plantar fasciitis</li>
-        <li>Reduces heel and arch pain</li>
-        <li>Combats muscle fatigue</li>
-        <li>Provides support for flat feet</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Flat Feet Features Section -->
-<section id="flatfeet" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/feature_flatfeet.png" alt="Visual breakdown of high arch inserts showing cut-to-size, honeycomb mesh and heel cushion">
-    </div>
-    <div class="info-text">
-      <h2>High Arch Inserts for Flat Feet</h2>
-      <p>Say goodbye to plantar fasciitis and heel pain with our specially designed shoe insoles. Every detail serves a purpose:</p>
-      <ul>
-        <li>Cut to suitable size for a personalised fit</li>
-        <li>Honeycomb mesh for breathability</li>
-        <li>Soft velvet fabric for luxurious feel</li>
-        <li>Arch support and U‑shaped heel to improve stability</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Balance & Stability Section -->
-<section id="balance" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/feature_balance.png" alt="Insole cross section showing high‑quality EVA material and medical‑grade support">
-    </div>
-    <div class="info-text">
-      <h2>Improves Balance & Stability</h2>
-      <p>Enjoy all‑day confidence on your feet. Our high‑quality materials provide firm yet comfortable support, improving your posture and reducing fatigue.</p>
-      <ul>
-        <li>High‑quality EVA material suitable for a variety of footwear</li>
-        <li>Soft velvet surface for gentle contact with your foot</li>
-        <li>Medical‑grade support increases foot stability with firm metatarsal support</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Fits Any Footwear Section -->
-<section id="fit" class="info-section">
-  <div class="container">
-    <div class="info-image">
-      <img src="images/feature_fitfootwear.png" alt="People in activewear with insoles displayed, showing compatibility with different types of shoes">
-    </div>
-    <div class="info-text">
-      <h2>Fits Any Footwear</h2>
-      <p>Whether you’re wearing running shoes, sneakers or boots, our insoles fit most men’s sizes 8–11 and women’s sizes 9–12. Trim them to match your shoe perfectly and feel the difference.</p>
-      <ul>
-        <li>Suitable for athletic shoes, casual sneakers and work boots</li>
-        <li>Easy trim‑to‑fit design ensures a custom fit</li>
-        <li>Meets your needs at the gym, on the trail or around town</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="about">
-  <h2>About Stablfeet</h2>
-  <p>Stablfeet is dedicated to keeping you active and pain‑free. Whether you’re on your feet all day or training for your next marathon, our orthotic insoles provide the stability and comfort you need to keep moving. Designed with care and precision, Stablfeet combines ergonomic engineering with quality materials to support your lifestyle.</p>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-  <h2>Get in Touch</h2>
-  <p>Have questions or need assistance? Reach out using the form below and we’ll get back to you soon.</p>
-  <form action="#" method="post">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="4" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="footer-content">
-    <p>© 2025 Stablfeet. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-    </div>
-  </div>
-</footer>
-
+    // simple lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeLb');
+    document.getElementById('gallery').addEventListener('click', (e)=>{
+      const img = e.target.closest('img');
+      if(!img) return;
+      lbImg.src = img.dataset.full || img.src;
+      lb.classList.add('open');
+    });
+    closeBtn.addEventListener('click', ()=> lb.classList.remove('open'));
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) lb.classList.remove('open'); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') lb.classList.remove('open'); });
+  </script>
 </body>
 </html>
