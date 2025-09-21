@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stablfeet – High‑Arch Orthotics Insoles</title>
+  <!-- Link to the page stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Stripe JS for checkout (used in create-checkout-session) -->
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <!-- Header with logo and call‑to‑action -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <!-- Replace src with your actual logo file name after uploading -->
+        <img src="images/logo.png" alt="Stablfeet logo">
+      </div>
+      <nav>
+        <a href="#pricing" class="btn primary-btn">Buy Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Effective High‑Arch Orthotics Insoles</h1>
+        <p>Experience comfort with each step. Our insoles combine advanced materials and thoughtful design to relieve pain and support your feet all day long.</p>
+        <ul class="features-list">
+          <li>Heel cushioning for shock absorption</li>
+          <li>Anti‑microbial fabric keeps feet fresh</li>
+          <li>Semi‑rigid support for stability</li>
+        </ul>
+        <div class="cta-buttons">
+          <a href="#guarantee" class="btn secondary-btn">30‑Day Money‑Back Guarantee</a>
+          <a href="#pricing" class="btn primary-btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Replace src with a photo of your insoles; ensure file lives in images folder -->
+        <img src="images/product-hero.jpg" alt="Stablfeet insoles and packaging">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Design benefits section -->
+  <section class="benefit-section">
+    <div class="container">
+      <h2>Designed for Foot Pain Relief</h2>
+      <p>Our insoles are engineered to target the root causes of foot discomfort. The arch support design provides relief and comfort to your arch, while the soft velvet fabric offers a luxurious feel.</p>
+      <ul class="benefit-list">
+        <li><strong>Arch Support Design:</strong> adds relief &amp; comfort to the arch</li>
+        <li><strong>Soft Velvet Fabric:</strong> soft and breathable for lasting comfort</li>
+        <li><strong>U‑Shaped Heel Protection:</strong> cradles the heel to stabilise every step</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Comfort & breathability section -->
+  <section class="comfort-section">
+    <div class="container">
+      <h2>Ultimate Comfort &amp; Breathability</h2>
+      <p>Made from breathable memory foam and velvet mesh, our insoles keep your feet dry and cool while adapting to your unique shape for a custom feel.</p>
+      <ul class="comfort-list">
+        <li><strong>Honeycomb Mesh:</strong> encourages airflow to keep feet dry</li>
+        <li><strong>Breathable Memory Foam:</strong> conforms to your foot shape</li>
+        <li><strong>Polyurethane Foam:</strong> provides responsive cushioning</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Size chart section -->
+  <section class="size-chart-section">
+    <div class="container">
+      <h2>Choose Your Size &amp; Trim to Fit</h2>
+      <p>Find your perfect size and follow the simple steps to customise your insoles.</p>
+      <table class="size-chart">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Men’s</th>
+            <th>Women’s</th>
+            <th>Length (cm)</th>
+            <th>Length (in)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Small</td>
+            <td>5–8½</td>
+            <td>6–10½</td>
+            <td>29.5</td>
+            <td>11.6</td>
+          </tr>
+          <tr>
+            <td>Large</td>
+            <td>8–11½</td>
+            <td>9–12½</td>
+            <td>27.6</td>
+            <td>10.86</td>
+          </tr>
+        </tbody>
+      </table>
+      <ol class="trim-steps">
+        <li>Remove the existing insoles from your shoes.</li>
+        <li>Compare &amp; align Stablfeet® with your old insoles.</li>
+        <li>Trim along the edge for a perfect fit.</li>
+        <li>Insert &amp; enjoy better comfort instantly.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Problem relief section -->
+  <section class="problem-relief-section">
+    <div class="container problem-grid">
+      <div class="problem-item">
+        <h3>Plantar Fasciitis</h3>
+        <p>Reduce heel and arch pain caused by inflammation.</p>
+      </div>
+      <div class="problem-item">
+        <h3>Heel Pain</h3>
+        <p>Cushion every step and alleviate pressure on the heel.</p>
+      </div>
+      <div class="problem-item">
+        <h3>Muscle Fatigue</h3>
+        <p>Support your muscles and reduce fatigue during activity.</p>
+      </div>
+      <div class="problem-item">
+        <h3>Flat Feet</h3>
+        <p>Provide arch support and promote natural alignment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footwear compatibility section -->
+  <section class="footwear-section">
+    <div class="container">
+      <h2>Fits Any Footwear</h2>
+      <p>Whether you wear sneakers, dress shoes, boots or trainers, our insoles are designed to enhance comfort and stability in every pair.</p>
+      <ul class="footwear-list">
+        <li><strong>Trim to Fit:</strong> customisable length</li>
+        <li><strong>Universal Use:</strong> suitable for running shoes, casual sneakers, boots and more</li>
+        <li><strong>Two Sizes:</strong> choose small or large based on your shoe size</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HSA / FSA eligible section -->
+  <section class="hsa-fsa-section" id="guarantee">
+    <div class="container">
+      <h2>HSA &amp; FSA Eligible</h2>
+      <p>Our insoles are recognised as eligible medical expenses. Pay with your Health Savings Account or Flexible Spending Account card at checkout without the hassle of submitting receipts.</p>
+      <a href="#checkout" class="btn primary-btn">Use Your Benefits</a>
+    </div>
+  </section>
+
+  <!-- Final call to action / checkout section -->
+  <section class="checkout-section" id="pricing">
+    <div class="container">
+      <h2>Ready to Experience Comfort?</h2>
+      <p>Give your feet the support they deserve. Order your Stablfeet® insoles now and step into a world of comfort.</p>
+      <!-- Link to your Stripe payment link or checkout page -->
+      <!-- Replace the href below with your actual Stripe Payment Link URL (e.g. https://buy.stripe.com/...) -->
+      <a id="checkout-link" href="#" class="btn primary-btn">Proceed to Checkout</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Stablfeet. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Initialize dynamic content -->
+  <script>
+    // Set the current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
